@@ -10,6 +10,7 @@ function Horn(horn) {
   this.description = horn.description;
 }
 Horn.allHorns = [];
+Horn.allKeywords = [];
 
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
@@ -25,14 +26,18 @@ Horn.prototype.render = function() {
   hornClone.removeClass('clone');
   hornClone.attr('class', this.name);
   hornClone.attr('class', this.keyword);
+  Horn.allKeywords.push(this.keyword);
 };
 
+Horn.addToDropdown = () => {
+  $.Horn.allKeywords
+}
 
 Horn.readJson = () => {
   $.get('data/page-1.json', 'json')
     .then(data => {
       data.forEach(item => {
-        Horn.allHorns.push( new Horn(item));
+        Horn.allHorns.push(new Horn(item));
       });
     })
     //render to the dom
@@ -43,4 +48,5 @@ Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render());
 };
 console.log(Horn.allHorns);
+console.log(Horn.allKeywords);
 $(() => Horn.readJson());
