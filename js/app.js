@@ -2,9 +2,12 @@
 
 
 function Horn(horn) {
-  this.name = horn.name;
+  this.name = horn.title;
   this.image_url = horn.image_url;
   this.hobbies = horn.hobbies;
+  this.keyword = horn.keyword;
+  this.horns = horn.horns;
+  this.description = horn.description;
 }
 Horn.allHorns = [];
 
@@ -21,6 +24,7 @@ Horn.prototype.render = function() {
   hornClone.find('p').text(this.hobbies);
   hornClone.removeClass('clone');
   hornClone.attr('class', this.name);
+  hornClone.attr('class', this.keyword);
 };
 
 
@@ -38,5 +42,5 @@ Horn.readJson = () => {
 Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render());
 };
-
+console.log(Horn.allHorns);
 $(() => Horn.readJson());
