@@ -21,7 +21,6 @@ const hornCollection = () => {
   });
 };
 
-
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
   let hornClone = $('div[class="clone"]');
