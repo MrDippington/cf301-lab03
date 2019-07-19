@@ -12,6 +12,16 @@ function Horn(horn) {
 Horn.allHorns = [];
 Horn.allKeywords = [];
 
+const hornCollection = () => {
+  Horn.allKeywords.forEach((currentHorn) => {
+    if (!currentHorn.includes() Horn.allKeywords){
+      arr.pop();
+    }
+    return hornCollection;
+  });
+};
+
+
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
   let hornClone = $('div[class="clone"]');
@@ -30,8 +40,8 @@ Horn.prototype.render = function() {
 };
 
 Horn.addToDropdown = () => {
-  $.Horn.allKeywords
-}
+  $.Horn.allKeywords;
+};
 
 Horn.readJson = () => {
   $.get('data/page-1.json', 'json')
@@ -50,3 +60,4 @@ Horn.loadHorns = () => {
 console.log(Horn.allHorns);
 console.log(Horn.allKeywords);
 $(() => Horn.readJson());
+
