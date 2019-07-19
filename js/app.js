@@ -11,14 +11,14 @@ function Horn(horn) {
 Horn.allHorns = [];
 Horn.allKeywords = [];
 
-const hornCollection = () => {
-  Horn.allKeywords.forEach((currentHorn) => {
-    if (!currentHorn.includes() Horn.allKeywords){
-      arr.pop();
-    }
-    return hornCollection;
-  });
-};
+// const hornCollection = () => {
+//   Horn.allKeywords.forEach((currentHorn) => {
+//     if (!currentHorn.includes() Horn.allKeywords){
+//       arr.pop();
+//     }
+//     return hornCollection;
+//   });
+// };
 
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
