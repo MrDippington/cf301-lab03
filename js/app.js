@@ -1,6 +1,5 @@
 'use strict';
 
-
 function Horn(horn) {
   this.name = horn.title;
   this.image_url = horn.image_url;
@@ -36,10 +35,7 @@ Horn.prototype.render = function() {
   hornClone.attr('class', this.name);
   hornClone.attr('class', this.keyword);
   Horn.allKeywords.push(this.keyword);
-};
-
-Horn.addToDropdown = () => {
-  $.Horn.allKeywords;
+  $('select').append(`'<option>${this.keyword}</option>'`);
 };
 
 Horn.readJson = () => {
