@@ -11,19 +11,9 @@ function Horn(horn) {
 Horn.allHorns = [];
 Horn.allKeywords = [];
 
-const hornCollection = () => {
-  Horn.allKeywords.forEach((currentHorn) => {
-    if (!currentHorn.includes() Horn.allKeywords){
-      arr.pop();
-    }
-    return hornCollection;
-  });
-};
-
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
   let hornClone = $('div[class="clone"]');
-
   let hornHtml = $('#horn-template').html(); // change in CSS
 
   hornClone.html(hornHtml);
@@ -34,8 +24,10 @@ Horn.prototype.render = function() {
   hornClone.removeClass('clone');
   hornClone.attr('class', this.name);
   hornClone.attr('class', this.keyword);
-  Horn.allKeywords.push(this.keyword);
-  $('select').append(`'<option>${this.keyword}</option>'`);
+  if (! Horn.allKeywords.includes(this.keyword)) {
+    Horn.allKeywords.push(this.keyword);
+    $('select').append(`'<option>${this.keyword}</option>'`);
+  }
 };
 
 Horn.readJson = () => {
@@ -55,4 +47,3 @@ Horn.loadHorns = () => {
 console.log(Horn.allHorns);
 console.log(Horn.allKeywords);
 $(() => Horn.readJson());
-
