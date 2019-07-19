@@ -1,6 +1,8 @@
 # cf301-lab02
 
+====================================================================
 ## Feature #1: Display images
+====================================================================
 
 Number and name of feature: 1. Display Images
 
@@ -24,13 +26,15 @@ Use AJAX, specifically $.get(), to read the provided JSON file.
 Each object should become a new instance of a constructor function. Refer to the data to determine the necessary properties.
 Use jQuery to make a copy of the HTML template of the photo component. For each object, fill in the duplicated template with its properties, then append the copy to the DOM.
 
+====================================================================
 ## Feature #2: Filter images
+====================================================================
 
-Number and name of feature: __________________
+Number and name of feature: 2. Filter Images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 30 minutes
 
-Start time: ______
+Start time: 20:50 - 22:20 18:45 - 
 
 Finish time: ______
 
@@ -47,7 +51,9 @@ How are we implementing it?
 Create a <select> element which contains unique <option> elements extracted dynamically from the JSON file, one for each keyword.
 Use an event handler to respond when the user chooses an option from the select menu. Hide all of the images, then show those whose keyword matches the option chosen.
 
+====================================================================
 ## Feature #3: Style the application
+====================================================================
 
 Number and name of feature: __________________
 
@@ -70,7 +76,9 @@ How are we implementing it?
 Style your application using floats.
 Utilize at least one Google font.
 
+====================================================================
 ## Stretch Goal: Sort the images
+====================================================================
 Why are we implementing this feature?
 As a user, I want to be able to sort the images so there is an order to how they render.
 What are we going to implement?

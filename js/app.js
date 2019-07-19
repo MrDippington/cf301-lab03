@@ -1,6 +1,5 @@
 'use strict';
 
-
 function Horn(horn) {
   this.name = horn.title;
   this.image_url = horn.image_url;
@@ -12,7 +11,6 @@ function Horn(horn) {
 Horn.allHorns = [];
 Horn.allKeywords = [];
 
-
 Horn.prototype.render = function() {
   $('main').append('<div class="clone"></div>');
   let hornClone = $('div[class="clone"]');
@@ -21,7 +19,7 @@ Horn.prototype.render = function() {
   hornClone.html(hornHtml);
 
   hornClone.find('h2').text(this.name);
-  hornClone.find('img').attr('src', this.image_url).attr('alt', "alt text");
+  hornClone.find('img').attr('src', this.image_url).attr('alt', this.description);
   hornClone.find('p').text(this.hobbies);
   hornClone.removeClass('clone');
   hornClone.attr('class', this.name);
@@ -30,18 +28,13 @@ Horn.prototype.render = function() {
     Horn.allKeywords.push(this.keyword);
     $('select').append(`'<option>${this.keyword}</option>'`);
   }
-  // Horn.allKeywords.push(this.keyword);
-  // for (let i=0; i<Horn.allKeywords.length; i++) {
-  //   console.log(Horn.allKeywords[i]);
-    
-  // }
 };
 
 Horn.readJson = () => {
   $.get('data/page-1.json', 'json')
     .then(data => {
       data.forEach(item => {
-        Horn.allHorns.push( new Horn(item));
+        Horn.allHorns.push(new Horn(item));
       });
     })
     //render to the dom
@@ -51,7 +44,6 @@ Horn.readJson = () => {
 Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render());
 };
-
-$(() => Horn.readJson());
-
+console.log(Horn.allHorns);
 console.log(Horn.allKeywords);
+$(() => Horn.readJson());
