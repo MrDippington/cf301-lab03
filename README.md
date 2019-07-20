@@ -8,9 +8,9 @@ Number and name of feature: 1. Display Images
 
 Estimate of time needed to complete: 1 hour
 
-Start time: 20:15
+Start time: 20:15 (17 Jul 19)
 
-Finish time: 20:38
+Finish time: 20:38 (17 Jul 19)
 
 Actual time needed to complete: 23 minutes
 
@@ -34,11 +34,11 @@ Number and name of feature: 2. Filter Images
 
 Estimate of time needed to complete: 30 minutes
 
-Start time: 20:50 - 22:20 18:45 - 
+Start time: 20:50 (17 Jul 19) 
 
-Finish time: ______
+Finish time: 21:15 (18 Jul 19)
 
-Actual time needed to complete: ______
+Actual time needed to complete: 4 hours
 
 Why are we implementing this feature?
 As a user, I want to be able to filter the images so that I can view only images that match a keyword.
@@ -55,15 +55,15 @@ Use an event handler to respond when the user chooses an option from the select 
 ## Feature #3: Style the application
 ====================================================================
 
-Number and name of feature: __________________
+Number and name of feature: 3. Style the application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: ______
+Start time: 20:30 (18 Jul 19)
 
-Finish time: ______
+Finish time: 21:30 (18 Jul 19)
 
-Actual time needed to complete: ______
+Actual time needed to complete: 1 hour
 
 Why are we implementing this feature?
 As a user, I want a simple, clean looking UI so that my photo gallery clearly displays the images in a grid like pattern.
