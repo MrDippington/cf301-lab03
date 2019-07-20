@@ -1,20 +1,14 @@
 # cf301-lab03
 
-```
-Number and name of feature: ________________________________
-
-Estimate of time needed to complete: _____
-
-Start time: _____
-
-Finish time: _____
-
-Actual time needed to complete: _____
-```
-
-Add this information to your README.
-
 ### Feature 1: Pagination
+
+```
+Number and name of feature: Pagination
+Estimate of time needed to complete: 
+Start time: 
+Finish time: 
+Actual time needed to complete: 
+```
 
 #### Why are we implementing this feature?
 
@@ -31,13 +25,15 @@ Then the other set of images should be dynamically displayed
 - Add navigation for the user to switch between two pages. Each page should render a unique set of images from one of the two provided JSON files.
 - Reset the filters, then repopulate them using only keywords from the images currently being displayed.
 
-Number and name of feature: Pagination
+### Feature 2: Templating
+
+```
+Number and name of feature: Templating
 Estimate of time needed to complete: 
 Start time: 
 Finish time: 
-Actual time needed to complete: 
-
-### Feature 2: Templating
+Actual time needed to complete:
+```
 
 #### Why are we implementing this feature?
 
@@ -54,13 +50,16 @@ Then each image should be rendered according to a template
 - Create the appropriate Handlebars template in your HTML with the same `<h2>, <img>, and <p>` elements as the jQuery template from the prior lab.
 - Refactor the method that renders your images to use Handlebars instead of making a copy with jQuery.
 
-Number and name of feature: Templating
+
+### Feature 3: Styling with Flexbox
+
+```
+Number and name of feature: Styling with Flexbox
 Estimate of time needed to complete: 
 Start time: 
 Finish time: 
 Actual time needed to complete:
-
-### Feature 3: Styling with Flexbox
+```
 
 #### Why are we implementing this feature?
 
@@ -76,13 +75,16 @@ Then the images should be displayed in columns, as screen width allows
 
 - Refactor your CSS to use Flexbox instead of floats. You are welcome to use a combination of floats and Flexbox, as you see fit.
 
-Number and name of feature: Styling with Flexbox
+
+### Feature 4: Sort the images
+
+```
+Number and name of feature: Sort the images
 Estimate of time needed to complete: 
 Start time: 
 Finish time: 
 Actual time needed to complete:
-
-### Feature 4: Sort the images
+```
 
 #### Why are we implementing this feature?
 
@@ -99,13 +101,17 @@ Then the images should be sorted accordingly
 - Add the ability for the user to sort the images by either title or by number of horns.
 - Sort the images by one of the properties on page load. This should also apply to the second page of images. 
 
-Number and name of feature: Sort the images
+
+## Stretch Goal: Detail view
+
+```
+Number and name of feature: Detail view
 Estimate of time needed to complete: 
 Start time: 
 Finish time: 
 Actual time needed to complete:
+```
 
-## Stretch Goal: Detail view
 
 #### Why are we implementing this feature?
 
@@ -125,6 +131,14 @@ Then the image should render larger on the screen with the description displayed
 - Use a transition or animation to show and hide the detail view of an image.
 
 ## Stretch Goal: Fuzzy search
+
+```
+Number and name of feature: Fuzzy search
+Estimate of time needed to complete: 
+Start time: 
+Finish time: 
+Actual time needed to complete:
+```
 
 #### Why are we implementing this feature?
 
