@@ -26,7 +26,7 @@ Horn.prototype.render = function() {
   hornClone.attr('class', this.keyword);
   if (! Horn.allKeywords.includes(this.keyword)) {
     Horn.allKeywords.push(this.keyword);
-    $('select').append(`'<option>${this.keyword}</option>'`);
+    $('select').append(`<option>${this.keyword}</option>`);
   }
 };
 
@@ -37,13 +37,23 @@ Horn.readJson = () => {
         Horn.allHorns.push(new Horn(item));
       });
     })
-    //render to the dom
+    
     .then(Horn.loadHorns);
 };
 
 Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render());
 };
+
+
+$('select').on('change',selShow);
+function selShow(){
+  let selItem=$(this).val();
+  $('div').hide();
+  $('div[class = "'+selItem+'"]').show();
+}
+
+
 console.log(Horn.allHorns);
 console.log(Horn.allKeywords);
 $(() => Horn.readJson());
