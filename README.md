@@ -6,11 +6,11 @@
 
 Estimate of time needed to complete: 1 hour
 
-Start time: 20:15 (17 Jul 19)
+Start time: 14:40
 
-Finish time: 20:38 (17 Jul 19)
+Finish time: 
 
-Actual time needed to complete: 23 minutes
+Actual time needed to complete:
 
 ### Why are we implementing this feature?
 
@@ -29,13 +29,13 @@ Reset the filters, then repopulate them using only keywords from the images curr
 ## Feature #2: Templating
 ====================================================================
 
-Estimate of time needed to complete: 30 minutes
+Estimate of time needed to complete: 
 
-Start time: 20:50 (17 Jul 19) 
+Start time:
 
-Finish time: 21:15 (18 Jul 19)
+Finish time: 
 
-Actual time needed to complete: 4 hours
+Actual time needed to complete: 
 
 ### Why are we implementing this feature?
 
@@ -54,13 +54,13 @@ Refactor the method that renders your images to use Handlebars instead of making
 ## Feature #3: Styling with Flexbox
 ====================================================================
 
-Estimate of time needed to complete: 1 hour
+Estimate of time needed to complete: 
 
-Start time: 20:30 (18 Jul 19)
+Start time: 
 
-Finish time: 21:30 (18 Jul 19)
+Finish time: 
 
-Actual time needed to complete: 1 hour
+Actual time needed to complete: 
 
 ### Why are we implementing this feature?
 
@@ -78,13 +78,13 @@ Refactor your CSS to use Flexbox instead of floats. You are welcome to use a com
 ## Feature #4: Sort the images
 ====================================================================
 
-Estimate of time needed to complete: 1 hour
+Estimate of time needed to complete: 
 
-Start time: 20:30 (18 Jul 19)
+Start time: 
 
-Finish time: 21:30 (18 Jul 19)
+Finish time: 
 
-Actual time needed to complete: 1 hour
+Actual time needed to complete: 
 
 ### Why are we implementing this feature?
 
@@ -98,6 +98,7 @@ Then the images should be sorted accordingly
 
 Add the ability for the user to sort the images by either title or by number of horns.
 Sort the images by one of the properties on page load. This should also apply to the second page of images.
+
 ====================================================================
 ## Stretch Goal: Detail view
 ====================================================================
