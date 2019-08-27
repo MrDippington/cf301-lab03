@@ -1,82 +1,71 @@
 'use strict';
 
-function Horn(horn) {
-  this.name = horn.title;
-  this.image_url = horn.image_url;
-  this.hobbies = horn.hobbies;
-  this.keyword = horn.keyword;
-  this.horns = horn.horns;
-  this.description = horn.description;
-}
-Horn.allHorns = [];
-Horn.allKeywords = [];
-
-Horn.prototype.render = function() {
-  let hornClone = $('<div></div>');
-  let hornHtml = $('#horn-template').html(); // change in CSS
-  
-  hornClone.html(hornHtml);
-  
-  hornClone.find('h2').text(this.name);
-  hornClone.find('img').attr('src', this.image_url).attr('alt', this.description);
-  hornClone.find('p').text(this.hobbies);
-  hornClone.removeClass('clone');
-  // hornClone.attr('class', this.name);
-  hornClone.attr('class', this.keyword);
-  $('main').append(hornClone);
-  if (! Horn.allKeywords.includes(this.keyword)) {
-    Horn.allKeywords.push(this.keyword);
-    $('select').append(`<option>${this.keyword}</option>`);
+function Horns(rawDataObject) {
+  for (let key in rawDataObject) {
+    this[key] = rawDataObject[key];
   }
+}
+
+Horns.allHorns = [];
+Horns.keywords = [];
+
+Horns.prototype.toHtml = function () {
+  let $template = $('#horns-template').html();
+  let compiledTemplate = Handlebars.compile($template);
+  return compiledTemplate(this);
 };
-let fileName = '../data/page-1.json'
-Horn.readJson = (fileName) => {
- 
-  $.get(fileName, 'json')
+
+Horns.readJson = ($value) => {
+  $.get(`./data/${$value}.json`, 'json')
     .then(data => {
       data.forEach(item => {
-        console.log(Horn.allHorns);
-        Horn.allHorns.push(new Horn(item));
-        
+        Horns.allHorns.push(new Horns(item));
       });
-      console.log(Horn.allHorns);
-      Horn.allHorns.forEach(horn => {
-        $('main').append(horn.render());
-      })
     })
-    
-    // .then(Horn.loadHorns);
-};
-
-// Horn.loadHorns = () => {
-//   Horn.allHorns.forEach(horn => {
-//     $('main').append(horn.render());
-//   })
-// };
-
-
-$('select').on('change',selShow);
-function selShow(){
-  let selItem=$(this).val();
-  $('div').hide();
-  $('div[class = "'+selItem+'"]').show();
+    .then(populateKeywords)
+    .then(sortKeywords)
+    .then(Horns.loadHorns)
+    .then(Horns.loadKeyword);
 }
 
-$( "#buttonOne" ).click(function() {
-  Horn.allHorns = [];
-  Horn.allKeywords = [];
-  $('div').remove();
-  $('option').remove();
-  fileName = '../data/page-1.json'
-  $(() => Horn.readJson(fileName));
+function populateKeywords() {
+  Horns.allHorns.forEach(horn => {
+    if (!Horns.keywords.includes(horn.keyword)) {
+      Horns.keywords.push(horn.keyword)
+    }
+  })
+}
+
+function sortKeywords() {
+  Horns.keywords.sort();
+}
+
+Horns.loadHorns = () => {
+  Horns.allHorns.forEach(horn => {
+    $('#horned-animals').append(horn.toHtml())
+  });
+};
+
+$(() => Horns.readJson($value));
+let $value = 'page-1';
+
+Horns.loadKeyword = () => {
+  Horns.keywords.forEach((keyword) => {
+    $('#filter').append(`<option class="filter-remove" value="${keyword}">${keyword}</option>`);
+  })
+};
+
+$('#filter').on('change', function () {
+  let $selection = $(this).val();
+  $('div').hide();
+  $(`div[class="${$selection}"]`).show();
 });
 
-$( "#buttonTwo" ).click(function() {
-  Horn.allHorns = [];
-  Horn.allKeywords = [];
+$('#click').on('change', function() {
+  $('.filter-remove').remove();
   $('div').remove();
-  $('option').remove();
-  fileName = '../data/page-2.json'
-  $(() => Horn.readJson(fileName));
+  let $value = $(this).val();
+  Horns.allHorns = [];
+  Horns.keywords = [];
+  Horns.readJson($value);
 });
-$(() => Horn.readJson(fileName));
