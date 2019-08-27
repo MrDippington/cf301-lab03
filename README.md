@@ -1,4 +1,4 @@
-# cf301-lab02
+# cf301-lab03
 
 ====================================================================
 ## Feature #1: Pagination
@@ -8,9 +8,9 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 14:40
 
-Finish time: 
+Finish time: 15:45
 
-Actual time needed to complete:
+Actual time needed to complete: 1hr 15min
 
 ### Why are we implementing this feature?
 
@@ -29,13 +29,13 @@ Reset the filters, then repopulate them using only keywords from the images curr
 ## Feature #2: Templating
 ====================================================================
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 2 hours
 
-Start time:
+Start time: 14:00
 
-Finish time: 
+Finish time: 15:30
 
-Actual time needed to complete: 
+Actual time needed to complete: 1hr 30min
 
 ### Why are we implementing this feature?
 
@@ -54,13 +54,13 @@ Refactor the method that renders your images to use Handlebars instead of making
 ## Feature #3: Styling with Flexbox
 ====================================================================
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 2 hours
 
-Start time: 
+Start time: 16:00
 
-Finish time: 
+Finish time: 16:45
 
-Actual time needed to complete: 
+Actual time needed to complete: 45min
 
 ### Why are we implementing this feature?
 
@@ -78,13 +78,13 @@ Refactor your CSS to use Flexbox instead of floats. You are welcome to use a com
 ## Feature #4: Sort the images
 ====================================================================
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 2 hours
 
-Start time: 
+Start time: 09:30
 
-Finish time: 
+Finish time: 14:00
 
-Actual time needed to complete: 
+Actual time needed to complete: 5 hours
 
 ### Why are we implementing this feature?
 
